@@ -1,5 +1,12 @@
-var sentence_win = "<p>Gratulálunk, ön egy igazi kínai állampolgár</p>";
-var sentece_lose = "<p>Ön elbukta a kína szociális kredit tesztet. 1 napja van még, míg John Xzina elkapja önt!</p>";
+var sentence_win = "<p>Gratulálunk, Ön egy igazi kínai állampolgár!</p>"
+var sentence_lose = "<p>Ön elbukta a Kína Social Credit tesztet. 1 napja van még, míg John Xina elkapja Önt!</p>"
+
+var img = document.createElement("img"); 
+
+img.win = "mrbeast.gif"; 
+
+img.lose = "laoganma.gif"; 
+
 function ellenoriz() {
     if(document.getElementById("kerdes1_1").checked
     && document.getElementById("kerdes2_2").checked
@@ -7,9 +14,9 @@ function ellenoriz() {
     && document.getElementById("kerdes4_2").checked
     && document.getElementById("kerdes5_1").checked
     && document.getElementById("kerdes6_1").checked) {
-        document.getElementById("win").innerHTML = sentence_win + "johnxina.png";
+        document.getElementById("win").innerHTML = sentence_win + '<img src="'+img.win+'" />';  
     }
     else {
-        document.getElementById("lose").innerHTML = sentece_lose + "johnxina.png";
+        document.getElementById("lose").innerHTML = sentence_lose + '<img src="'+img.lose+'" />';
     }
 }
