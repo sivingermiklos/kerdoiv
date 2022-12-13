@@ -6,3 +6,9 @@ html {
 body {
     background-color: transparent;
 }
+
+form {
+    border: 5px black solid;
+    background-color: rgba(50,50,50,0.5);
+    border-radius: 20px;
+}
